@@ -1,68 +1,89 @@
+*{
 
+  padding:0;
+  margin:0;
+
+}
 
 body {
-font-family: 'lato', sans-serif;
-background: #C70039;
-display: flex;
-align-items: center;
-justify-content: center
+  font-family: 'helvetica', sans-serif;}
 
+h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 54px;
 }
 
 .container {
-  background: #EEE2DF;
-  border-radius: 10px;
-  box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
-  width:450px;
-  height: 450px;
-  padding: 1em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
+
+  width: 100vw;
+  height: 100vh;
+  background: #C70039;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center}
+
+.boxlogin {
+
+  background: white;
+  width: 60%;
+  height: 60%;
+  border-radius: 30px;
+  text-align: center;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+} 
+
+a {
+    text-decoration: none;
+    color: #C70039;
 }
 
-.logo img{
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-	width: 100px;
-  	padding: 20px 20px 0;
+.logo {
+
+  margin: 30px;
+}
+
+.logo img {
+
+  width: 60px;
+}
+
+.botao{
+
+  width: 150px;
+  background-color:#0f9417;
+  border-radius:30px;
+  border:1px solid #18ab29;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:17px;
+  padding:16px 31px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #2f6627;
+}
+
+.botao:hover {
+  background-color:#5cbf2a;
+}
+.botao:active {
+  position:relative;
+  top:1px;
+}
+
+input {
+
+  border-radius: 30px;
+  border:2px solid #F5F5DC;
+  padding: 10px;
+  margin: 10px;
 
 }
 
-.input {
+label {
 
-	position: relative;
-
-}
-
-.input-text {
-
-	display: block;
-	margin: 0;
-	width: 100%;
-}
-
-.input-label {
-
-display: block;
-position: absolute;
-opacity: 0;
-}
-
-.input-text:placeholder-shown + .input-label {
-  visibility: hidden;
-  z-index: 2;
-}
-
-.input-text:not(:placeholder-shown) + .input-label,
-.input-text:focus:not(:placeholder-shown) + .input-label {
-
-  visibility: visible;
-  z-index: 2;
-  opacity: 1;
-
+ color: gray;
 }

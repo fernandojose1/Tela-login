@@ -1,9 +1,11 @@
 <?php
 
+include_once ("conexao.php");
+
 $login = $_POST['login'];
 $entrar = $_POST['entrar'];
 $senha = md5($_POST['senha']);
-$connect = mysqli_connect('localhost:3306','root','', 'crud01');
+
 
   if (isset($entrar)) {
 
@@ -16,7 +18,7 @@ $connect = mysqli_connect('localhost:3306','root','', 'crud01');
         die();
       }else{
         setcookie("login",$login);
-        header("Location:index.php");
+        header("Location:index.html");
       }
   }
 ?>

@@ -1,7 +1,9 @@
 <?php 
+
+include_once ("conexao.php");
+
 $login = $_POST['login'];
 $senha = md5($_POST['senha']);
-$connect = mysqli_connect('localhost:3306','root','','crud01');
 $query_select = "SELECT login FROM usuarios WHERE login = '$login'";
 $select = mysqli_query($connect,$query_select);
 $total = mysqli_num_rows($select);
